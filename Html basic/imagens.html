@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imagens</title>
+    </head>
+    <body>
+        <!-- 
+        img: imagem que pode ser pega de algum link ou trazida de uma pasta do programa
+        alt: texto alt
+        map: cria uma area de mapa
+        area shape: cria uma forma atraves das cordenadas dos pontos de uma forma
+        usemap: utiliza as formas criadas para tornar a imagem clicavel, e, caso seja atestado uma 
+        pagina a ser redirecionada, levará a ela
+        -->
+        <h1>Imagens</h1>
+        <hr>
+        <img src="img/formas.png" alt="Formas" usemap="#Formas">
+        <map name="Formas">
+            <area shape="circle" coords="70,71,60" href="circulo.html" alt="circulo">
+            <area shape="rect" coords="177,139,314,2" href="quadrado.html" alt="Quadrado">
+            <area shape="rect" coords="352,114,526,28" href="ret.html" alt="retangulo">
+            <area shape="poly" coords="568,130,627,12,687,130" href="triangulo.html" alt="triangulo">
+        </map>
+    </body>
+</html>

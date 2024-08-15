@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabelass</title>
+    </head>
+    <body>
+        <!--
+        table: cria uma tabela
+        thead: cabeçalho da tabela
+        tbody: corpo da tabela
+        tfoot: rodapé da tabela
+        tr: linha
+        th: coluna
+        colspan: quantas colunas uma coluna especifica ocupará, limitado
+        a quantidade total de colunas
+        rowspan: quantas linhas determinada linha ocupará, limitado ao numero
+        maximo de linhas
+        cellpadding: espaço entre o conteudo da celula e as suas bordas
+        cellspacing: espaço entre as linhas 
+        -->
+        <h1>Tabelas</h1>
+        <hr>
+        <table border="1" width="70%" cellpadding="5" cellspacing="5" align="center" bgcolor="aqua" frame="box" rules="all">
+            <caption>Titulo da tabela</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">Nome Completo</th> 
+                    <th rowspan="2" width="20%">Idade</th>
+                </tr>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Celula 2,1</td>
+                    <td>Celula 2,2</td>
+                    <td>Celula 2,3</td>
+                </tr>
+                <tr>
+                    <td>Celula 3,1</td>
+                    <td>Celula 3,2</td>
+                    <td>Celula 3,3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Celula 4,1</td>
+                    <td>Celula 4,2</td>
+                    <td>Celula 4,3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

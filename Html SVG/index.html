@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem SVG</title>
+</head>
+<body>
+   <!--
+   svg: permite a criação de uma imagem em svg
+   stroke: borda, configurado atraves de stroke-width(largura da borda) stroke-opacity(opacidade da borda)
+
+   configurações comuns entre as formas: fill(cor da forma), fill-opacity(opacidade da forma)
+
+   circle: cria um circulo, configurado atraves de - cx(localização do ponto central no eixo x)
+   cy(localização do ponto central no eixo y) r(raio)
+
+   rect: cria um quadrado ou retangulo, configurado atraves de -width(largura) height(comprimento) 
+   x(ponto inicial no eixo x) y(ponto inicial no ponto y) rx/ry(arredonda as bordas)
+
+   ellipse: cria uma elipse,configurado atraves de - cx(localização do ponto central no eixo x)
+   cy(localização do ponto central no eixo y) rx(raio do eixo x) ry(raio do eixo y)
+
+   line: cria uma linha reta, configurado atraves de - x1/y1(coordenadas do primeiro ponto no eixo x/y) 
+   x2/y2(coordenadas do segundo ponto no eixo x/y)
+
+   polygon: cria um poligono, configurado atraves de - points(pontos em que a figura se encontra, 
+   dados esse de 2 em 2, como por exemplo 0,0)
+
+   polyline:cria uma linha que pode ter varios pontos, configurado atraves de - points(pontos
+   em que a figura se encontra, dados esse de 2 em 2, como por exemplo 0,0)
+
+   text: texto, para centralizar - text-anchor="middle"
+
+   animate: anima um objeto qualquer feito de svg, configurado atraves de - xlink:href(usa o id para
+   localizar o elemento svg) attributeName(atributo a ser animado) from/to(ed onde até onde esse elemento
+   é para ser animado) begin(por qual motivo deve começar a animação, como por exemplo 2s para segundos e click ao clicar)
+   dur(duração da animação) fill(como deve ficar o elemento após a animação) repeatCount(quantas vezes a animação será
+   repetida)
+   -->
+    <h1>Imagem SVG</h1>
+    <hr>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="30" stroke="magenta" stroke-width="4" fill="blue" fill-opacity="0.5" stroke-opacity="0.5">
+    </svg>
+    <svg width="100" height="100">
+        <rect width="50" height="70" x ="25" y="15" stroke="magenta" stroke-width="4" fill="blue" fill-opacity="0.5" stroke-opacity="0.5" rx="10" ry="10">
+     </svg>
+     <svg width="100" height="100">
+        <ellipse cx="50" cy="50" rx="30" ry="15" fill="blue" stroke="magenta" stroke-width="4" fill-opacity="0.5" stroke-opacity="0.5">
+     </svg>
+     <svg width="100" height="100">
+        <line x1="0" y1="0" x2="100" y2="100" stroke="blue" stroke-width="5" stroke-opacity="0.5">
+     </svg>
+     <svg width="100" height="100">
+        <polygon points="3,97,50,3,97,97" stroke="magenta" stroke-width="5" stroke-opacity="0.5" fill="blue" fill-opacity="0.5">
+     </svg>
+     <svg width="100" height="100">
+        <polygon points="50,5,20,99,95,39,5,39,80,99" fill-rule="evenodd" stroke="magenta" stroke-width="3" stroke-opacity="0.5" fill="blue" fill-opacity="0.5">
+     </svg>
+     <svg width="100" height="100">
+        <polyline points="0,20,20,20,20,40,40,40,40,60,60,60,60,80"  stroke="magenta" stroke-width="3" stroke-opacity="0.5" fill="none">
+     </svg>
+     <svg width="600" height="300">
+        <rect width="596"height=296 fill="none" stroke="black" stroke-width="4" x="2" y="2"/>
+        <rect width="100"height=50 fill="blue" stroke="magenta" stroke-width="2" x="10" y="10" id="r1"/>
+        <text x="300" y="150" text-anchor="middle">
+            SVG é mto bom!
+        </text>
+        <animate xlink:href="#r1" attributeName="width" from="1" to="580" dur="2s" begin="click" fill="freeze" repeatCount="2"/>
+     </svg>
+</body>
+</html>

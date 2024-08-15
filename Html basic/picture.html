@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture</title>
+</head>
+<body>
+    <h1>Picture</h1>
+    <hr>
+    <!--picture: consegue colocar uma imagem de um site/arquivo antes apontado, tendo 
+    como opção colocar varios arquivos para a possivel troca de imagem dependendo do
+    tamanho da tela-->
+    <picture>
+        <source media="(min-width: 600px)" srcset="img/moon.png">
+        <source media="(min-width: 400px)" srcset="img/moon75.png">
+        <source media="(min-width: 300px)" srcset="img/moon50.png">
+        <source media="(min-width: 200px)" srcset="img/moon25.png">
+        <img src="img/moon.png" alt="Lua">
+    </picture>
+</body>
+</html>
